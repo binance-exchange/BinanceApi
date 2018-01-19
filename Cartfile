@@ -1,2 +1,2 @@
-github "Alamofire/Alamofire" ~> 4.5
+github "Alamofire/Alamofire"
 github "soffes/CommonCrypto"

@@ -13,7 +13,9 @@ import Alamofire
 public struct BinancePingRequest: BinanceRequest, Codable {
     public static let endpoint = "v1/ping"
     public static let method: HTTPMethod = .get
-
+    
+    public init () {}
+    
     public struct Response: Codable {}
 }
 
@@ -22,6 +24,8 @@ public struct BinanceTimeRequest: BinanceRequest {
     public static let endpoint = "v1/time"
     public static let method: HTTPMethod = .get
 
+    public init () {}
+    
     public struct Response: Decodable {
         public let localTime = Date()
         public let serverTime: Date
@@ -176,6 +180,10 @@ public struct Binance24HourTickerRequest: BinanceRequest, Codable {
     public static let endpoint = "v1/ticker/24hr"
     public static let method: HTTPMethod = .get
 
+    public init(symbol: String) {
+        self.symbol = symbol
+    }
+    
     public let symbol: String
 
     public struct Response: Codable {
@@ -189,6 +197,8 @@ public struct Binance24HourTickerRequest: BinanceRequest, Codable {
         public let openPrice: Decimal
         public let highPrice: Decimal
         public let lowPrice: Decimal
+        public let volume: Decimal
+        public let quoteVolume: Decimal
         public let openTime: Date
         public let closeTime: Date
         public let firstId: UInt64
@@ -199,11 +209,13 @@ public struct Binance24HourTickerRequest: BinanceRequest, Codable {
 
 /// Latest `price` for all `symbol`s.
 public struct BinanceAllPricesRequest: BinanceRequest, Codable {
-    public static let endpoint = "v1/ticker/allPrices"
+    public static let endpoint = "v3/ticker/price"
     public static let method: HTTPMethod = .get
 
+    public init () {}
+    
     public struct Response: Decodable {
-        let elements: [String: Decimal]
+        public let elements: [String: Decimal]
 
         public init(from decoder: Decoder) throws {
             var dict = [String: Decimal]()
@@ -230,6 +242,8 @@ public struct BinanceAllBookTickersRequest: BinanceRequest, Codable {
     public static let endpoint = "v1/ticker/allBookTickers"
     public static let method: HTTPMethod = .get
 
+    public init () {}
+    
     public struct Element: Codable {
         public let bidPrice: Decimal
         public let bidQuantity: Decimal
@@ -276,7 +290,7 @@ public struct BinanceAllBookTickersRequest: BinanceRequest, Codable {
 public struct BinanceNewOrderRequest: BinanceSignedRequest, Codable {
     public static let endpoint = "v3/order"
     public static let method = HTTPMethod.post
-
+    
     public let symbol: String
     public let side: BinanceOrderSide
     public let type: BinanceOrderType

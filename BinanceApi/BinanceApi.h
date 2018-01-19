@@ -6,7 +6,7 @@
 //  Copyright © 2017 Sumant Manne. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Foundation;
 
 //! Project version number for BinanceApi.
 FOUNDATION_EXPORT double BinanceApiVersionNumber;

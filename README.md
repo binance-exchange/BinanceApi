@@ -77,7 +77,7 @@ let api = BinanceApi()
 let request = BinanceAllPricesRequest()
 
 api.send(request) { response in
-    assert(request.result.isSuccess)
+    assert(response.result.isSuccess)
 
     let elements = response.result.value!.elements
     for (symbol, price) in elements {

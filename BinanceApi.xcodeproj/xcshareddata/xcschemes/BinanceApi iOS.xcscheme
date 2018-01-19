@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0920"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E928A46A1F9A03AD0078BA33"
+               BlueprintIdentifier = "6C380925200E3FCA00670C25"
                BuildableName = "BinanceApi.framework"
-               BlueprintName = "BinanceApi"
+               BlueprintName = "BinanceApi iOS"
                ReferencedContainer = "container:BinanceApi.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,26 +29,7 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E928A4731F9A03AD0078BA33"
-               BuildableName = "BinanceApiTests.xctest"
-               BlueprintName = "BinanceApiTests"
-               ReferencedContainer = "container:BinanceApi.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E928A46A1F9A03AD0078BA33"
-            BuildableName = "BinanceApi.framework"
-            BlueprintName = "BinanceApi"
-            ReferencedContainer = "container:BinanceApi.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -66,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E928A46A1F9A03AD0078BA33"
+            BlueprintIdentifier = "6C380925200E3FCA00670C25"
             BuildableName = "BinanceApi.framework"
-            BlueprintName = "BinanceApi"
+            BlueprintName = "BinanceApi iOS"
             ReferencedContainer = "container:BinanceApi.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,9 +65,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E928A46A1F9A03AD0078BA33"
+            BlueprintIdentifier = "6C380925200E3FCA00670C25"
             BuildableName = "BinanceApi.framework"
-            BlueprintName = "BinanceApi"
+            BlueprintName = "BinanceApi iOS"
             ReferencedContainer = "container:BinanceApi.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
